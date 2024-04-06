@@ -17,10 +17,10 @@ public class Order {
     //CONSTRUCTOR:
     public Order(int numberSeats, Table table) {
         Random random = new Random();
-        if(table.getMaxNumberSeats() <= numberSeats) {
-            throw new RuntimeException("Number of seats greater than the capacity of the table!")
+        if (table.getMaxNumberSeats() <= numberSeats) {
+            throw new RuntimeException("Number of seats greater than the capacity of the table!");
         }
-        this.orderNumber = random.nextInt(1,100000);
+        this.orderNumber = random.nextInt(1, 100000);
         this.state = State.IN_PROGRESS;
         this.numberSeats = numberSeats;
         this.acquisitionTime = LocalTime.now();
@@ -31,7 +31,7 @@ public class Order {
     //METHODS:
     //Method to add products in ordered products list:
     public void addProduct(Product product) {
-         this.orderedProducts.add(product);
+        this.orderedProducts.add(product);
     }
 
     //Method to get total cost:
@@ -40,7 +40,7 @@ public class Order {
     }
 
     //Method to print the order:
-    public void print(){
+    public void print() {
         System.out.println("------------ORDER n." + this.orderNumber + " ------------");
         System.out.println("State: " + this.state);
         System.out.println("Number of seats: " + this.numberSeats);
@@ -50,5 +50,4 @@ public class Order {
         this.orderedProducts.forEach(System.out::println);
         System.out.println("TOTAL COST: " + this.getTotal());
     }
-
 }
