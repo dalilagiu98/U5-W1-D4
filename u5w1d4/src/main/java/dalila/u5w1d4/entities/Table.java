@@ -1,9 +1,11 @@
 package dalila.u5w1d4.entities;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 
-//LOMBOK
+//LOMBOK:
 @AllArgsConstructor
+@Getter
 public class Table {
     //ATTRIBUTES LIST:
     private int tableNumber;
