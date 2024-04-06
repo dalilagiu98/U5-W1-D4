@@ -1,6 +1,9 @@
 package dalila.u5w1d4.entities;
 
+import lombok.ToString;
+
 import java.util.List;
+
 
 public class Pizza extends Product{
 
@@ -38,5 +41,15 @@ public class Pizza extends Product{
             }
         }
         return totPrice;
+    }
+
+    @Override
+    public String toString() {
+        return "Pizza{" +
+                "name='" + name + '\'' +
+                ", toppingList=" + toppingList +
+                ", calories=" + calories +
+                ", price=" + price +
+                '}';
     }
 }

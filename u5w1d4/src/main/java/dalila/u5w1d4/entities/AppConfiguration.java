@@ -83,6 +83,7 @@ public class AppConfiguration {
     }
 
     //MENU BEAN:
+    @Bean
     public Menu menuBean() {
         List<Pizza> pizzaList = new ArrayList<>();
         List<Topping> toppingList = new ArrayList<>();
